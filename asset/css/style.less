@@ -1,0 +1,276 @@
+*{
+	padding: 0;
+	margin: 0;
+	
+}
+.container{
+	width: 90%;
+	margin: 0 auto;
+}
+.container::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+header{
+	height: 70px;
+	h1{
+		display: inline-block;
+		float: left;
+		padding: 16px 24px;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		a{
+			transition: .9s;
+			text-decoration: none;
+
+		}
+		a:hover{
+			color: red;
+
+		}
+	}
+	ul{
+		float: right;
+		li{
+			padding: 24px;
+			display: inline-block;
+			a{
+				transition: .9s;
+				text-decoration: none;
+				font-family: 'Quicksand', sans-serif;
+			}
+		}
+	}
+	.mobile:hover{
+		color: red;
+	}
+	.mobile{
+		float: right;
+		display: none;
+		padding: 18px;
+	}
+}
+.sidebar{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -300px;
+	width: 300px;
+	background-color: rgba(16, 47 ,80, 0.9);
+	transition: .5s;
+	ul{
+		li:hover{
+			background-color:#F84744;
+			transition: .5s;
+		}
+		li{
+			padding: 25px;
+			a{
+				color: white;
+				font-family: 'Quicksand', sans-serif;
+			}
+		}
+	}
+}
+section.banner{
+	background-color: #1F68B6;
+	padding: 80px 0px;
+	img{
+		width: 250px;
+		margin-bottom: 10px;
+	}h2{
+		padding-bottom: 10px;
+		padding-left: 40px;
+		color: white;
+		font-family: 'Quicksand', sans-serif;
+		font-size: 50px;
+		}p,h1{
+			padding-left: 40px;
+		margin-bottom: 10px;
+		font-size: 20px;
+		color: white;
+		font-family: 'Quicksand', sans-serif;
+	}
+}
+section.about{
+	   h3{
+	 	padding:0px -10px;
+	 	text-align: center;
+	 	margin: 20px;
+	 	font-family: 'Quicksand', sans-serif;
+	 }
+	 p{
+	 	font-family: 'Quicksand', sans-serif;
+	 	text-align: justify;
+	 	line-height: 23px;
+	 	margin-bottom: 15px;
+	 	padding: 40px;
+	 }
+}
+section.our-service{
+		font-family: 'Quicksand', sans-serif;
+	.container{
+		h3{
+			text-align: center;
+			margin: 40px;
+			background: rgb(51,52,162);
+			background: linear-gradient(112deg, rgba(51,52,162,1) 0%, rgba(138,138,194,1) 38%, rgba(0,255,124,1) 93%);
+			border-radius: 50px;
+			padding: 10px;
+		}
+		.row{
+			.col-md-3{
+				i{
+					padding-left: 110px;
+				}
+				.title-1{
+					h2{
+						color: grey;
+						font-size: 20px;
+						padding-top: 39px;
+						text-align: center;
+						margin: 17px;
+					}
+				}
+			}.col-md-3{
+				i{
+					padding-left: 100px;
+				}
+				.title-2{
+					h2{
+						color: grey;
+						font-size: 20px;
+						padding-top: 39px;
+						text-align: center;
+						margin: 18px;
+					}
+				}
+			}
+			.col-md-3{
+				i{
+					padding-left: 100px;
+				}
+				.title-3{
+					h2{
+						color: grey;
+						font-size: 20px;
+						padding-top: 39px;
+						text-align: center;
+						margin: 19px;
+					}
+				}
+			}
+			.col-md-3{
+				i{
+					padding-left: 100px;
+				}
+				.title-4{
+					h2{
+						color: grey;
+						font-size: 20px;
+						padding-top: 39px;
+						text-align: center;
+						margin: 19px;
+					}
+				}
+			}
+		}
+	}
+}
+section.contact{
+	.container{
+		.title-kontak{
+			h2{
+				padding-top: 40px;
+			}
+		}
+		.row{
+			border:1px solid;
+			.col-md-4{
+				.info-kontak{
+					p{
+						padding: 30px 10px;
+					}
+				}
+			}
+			.col-md-2{
+				.foto-kontak{
+					img{
+						width: 200px;
+						height: auto;
+						margin-left: 400px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px){
+	label.mobile{
+		display: block;
+	}
+	header {
+		ul{
+			display: none;
+		}
+	}
+	section.our-service{
+		i{
+			left:700px;
+		}
+	}
+}
+#check:checked ~.sidebar{
+	left: 0;
+}
+#check{
+	display: none;
+}
+.link-atas::after{
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: black;
+	transition: width .8s;
+}
+.link-atas:hover::after{
+	width: 100%;
+	transition: width .6s;
+}
+.link-servis::after{
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: rgb(51,52,162);
+	background: linear-gradient(112deg, rgba(51,52,162,1) 0%, rgba(138,138,194,1) 38%, rgba(0,255,124,1) 93%);
+	transition: top .9s;
+}
+.link-servis:hover::after{
+	width: 100%;
+	transition: width 1s;
+}
+.ketik{
+	overflow: hidden;
+	white-space: nowrap;
+	animation: typingAnim 3s steps(30);
+}
+@keyframes typingAnim {
+	from {width: 0}
+	to{width: 100%}
+ }
+	
